@@ -1,5 +1,4 @@
 import { PublicClientApplication } from '@azure/msal-node';
-import keytar from 'keytar';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
@@ -60,7 +59,8 @@ class AuthManager {
       let cacheData;
 
       try {
-        const cachedData = await keytar.getPassword(SERVICE_NAME, TOKEN_CACHE_ACCOUNT);
+        // const cachedData = await keytar.getPassword(SERVICE_NAME, TOKEN_CACHE_ACCOUNT);
+        const cachedData = process.env.keytarPass;
         if (cachedData) {
           cacheData = cachedData;
         }

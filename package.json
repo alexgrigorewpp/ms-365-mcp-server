@@ -33,7 +33,6 @@
     "@modelcontextprotocol/sdk": "^1.8.0",
     "commander": "^11.1.0",
     "js-yaml": "^4.1.0",
-    "keytar": "^7.9.0",
     "winston": "^3.17.0",
     "zod": "^3.24.2"
   },
